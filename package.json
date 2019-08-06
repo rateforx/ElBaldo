@@ -1,0 +1,29 @@
+{
+    "name": "elbaldo",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node bin/www"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "cookie-parser": "~1.4.4",
+        "dat.gui": "^0.7.6",
+        "debug": "~2.6.9",
+        "express": "~4.16.1",
+        "http-errors": "~1.6.3",
+        "morgan": "~1.9.1",
+        "pug": "^2.0.4",
+        "three": "^0.107.0",
+        "jquery": "latest"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-es2015": "^7.0.0-beta.53",
+        "babel-preset-es2015": "^6.24.1",
+        "babelify": "^10.0.0",
+        "browserify": "^16.3.0",
+        "watchify": "^3.11.1"
+    }
+}

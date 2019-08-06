@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+    canvas#freq(width="1024" height="525")
+    #three
+
+    //#scene
+        #sun
+        #grid
+        //#stars(data-depth=.1)
+
+    //.container
+        .h1 Vaporwave portfolio loading...
+        i.material-icons-round#playButton(type="button" onClick="play()") volume_off
+
+    .hidden
+        audio#machine_rain
+            source(src='machine_rain.mp3' type='audio/mpeg')
+
+    //#info
+        p "W" translate | "E" rotate | "R" scale | "+" increase size | "-" decrease size
+        p "Q" toggle world/local space |  Hold "Ctrl" down to snap to grid
+        p "X" toggle X | "Y" toggle Y | "Z" toggle Z | "Spacebar" toggle enabled
