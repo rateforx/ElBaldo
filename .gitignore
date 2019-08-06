@@ -92,3 +92,4 @@ typings/
 .gitignore
 .idea/
 public/js/bundle.js
+public/js/bundle.js
