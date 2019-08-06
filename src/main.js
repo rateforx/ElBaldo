@@ -217,7 +217,7 @@ function init () {
         orbitControls.update();
         // document.getElementById( 'info' ).style = `display: ${ value ? 'block' : 'none' }`;
     } );
-    gui.open();
+    // gui.open();
 
     window.addEventListener( 'resize', onResize, false );
 
