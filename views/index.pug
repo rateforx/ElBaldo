@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-    canvas#freq(width="1024" height="525")
+    //canvas#freq(width="1024" height="525")
     #three
 
     //#scene
@@ -14,9 +14,10 @@ block content
         .h1 Vaporwave portfolio loading...
         i.material-icons-round#playButton(type="button" onClick="play()") volume_off
 
-    .hidden
-        audio#machine_rain
-            source(src='machine_rain.mp3' type='audio/mpeg')
+    //.hidden
+    audio#player(autoplay, controls)
+        source(src='Sun_Araw_-_02_-_Horse_Steppin.mp3' type='audio/mpeg')
+        source(src='machine_rain.mp3' type='audio/mpeg')
 
     //#info
         p "W" translate | "E" rotate | "R" scale | "+" increase size | "-" decrease size

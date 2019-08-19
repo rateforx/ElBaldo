@@ -10206,11 +10206,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.TransformControlsPlane = exports.TransformControlsGizmo = exports.TransformControls = void 0;
 
 var _threeModule = require("../../../build/three.module.js");
+
 /**
  * @author arodic / https://github.com/arodic
  */
-
-
 var TransformControls = function TransformControls(camera, domElement) {
   _threeModule.Object3D.call(this);
 
@@ -12715,30 +12714,7 @@ var _UnrealBloomPass = require("three/examples/jsm/postprocessing/UnrealBloomPas
 
 var _TransformControls = require("three/examples/jsm/controls/TransformControls");
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
-
-          if (desc.get || desc.set) {
-            Object.defineProperty(newObj, key, desc);
-          } else {
-            newObj[key] = obj[key];
-          }
-        }
-      }
-    }
-
-    newObj["default"] = obj;
-    return newObj;
-  }
-}
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 window.THREE = THREE;
 var scene;
@@ -12867,13 +12843,13 @@ function init() {
   scene.add(directionalLight); // controls
 
   var orbitControls = new _OrbitControls.OrbitControls(camera, renderer.domElement);
-  orbitControls.enabled = params.controlsEnabled;
-  var transformControls = new _TransformControls.TransformControls(camera, renderer.domElement);
-  transformControls.enabled = params.controlsEnabled;
-  transformControls.addEventListener('change', animate);
-  transformControls.addEventListener('dragging-changed', function (event) {
-    orbitControls.enabled = !event.value;
-  }); // dat.gui
+  orbitControls.enabled = params.controlsEnabled; // let transformControls = new TransformControls( camera, renderer.domElement );
+  // transformControls.enabled = params.controlsEnabled;
+  // transformControls.addEventListener( 'change', animate );
+  // transformControls.addEventListener( 'dragging-changed', event => {
+  //     orbitControls.enabled = !event.value;
+  // } );
+  // dat.gui
 
   gui = new _dat.GUI();
   gui.add(params, 'scale', 1, 10).onChange(function (value) {
@@ -12904,85 +12880,62 @@ function init() {
     render();
   });
   gui.add(params, 'controlsEnabled').onChange(function (value) {
-    transformControls.enabled = value;
-    transformControls.update();
+    // transformControls.enabled = value;
+    // transformControls.update();
     orbitControls.enabled = value;
-    orbitControls.update();
-    document.getElementById('info').style = "display: ".concat(value ? 'block' : 'none');
-  });
-  gui.open();
+    orbitControls.update(); // document.getElementById( 'info' ).style = `display: ${ value ? 'block' : 'none' }`;
+  }); // gui.open();
+
   window.addEventListener('resize', onResize, false); // transform controls events
 
-  window.addEventListener('keydown', function (event) {
-    switch (event.keyCode) {
-      case 81:
-        // Q
-        transformControls.setSpace(transformControls.space === 'local' ? 'world' : 'local');
-        break;
-
-      case 17:
-        // Ctrl
-        transformControls.setTranslationSnap(100);
-        transformControls.setRotationSnap(Math.degToRad(15));
-        break;
-
-      case 87:
-        // W
-        transformControls.setMode('translate');
-        break;
-
-      case 69:
-        // E
-        transformControls.setMode('rotate');
-        break;
-
-      case 82:
-        // R
-        transformControls.setMode('scale');
-        break;
-
-      case 187:
-      case 107:
-        // +, =, num+
-        transformControls.setSize(transformControls.size + 0.1);
-        break;
-
-      case 189:
-      case 109:
-        // -, _, num-
-        transformControls.setSize(Math.max(transformControls.size - 0.1, 0.1));
-        break;
-
-      case 88:
-        // X
-        transformControls.showX = !transformControls.showX;
-        break;
-
-      case 89:
-        // Y
-        transformControls.showY = !transformControls.showY;
-        break;
-
-      case 90:
-        // Z
-        transformControls.showZ = !transformControls.showZ;
-        break;
-
-      case 32:
-        // Spacebar
-        transformControls.enabled = !transformControls.enabled;
-        break;
-    }
-  });
-  window.addEventListener('keyup', function (event) {
-    switch (event.keyCode) {
-      case 17:
-        // Ctrl
-        transformControls.setTranslationSnap(null);
-        transformControls.setRotationSnap(null);
-        break;
-    }
-  });
+  /*window.addEventListener( 'keydown', function ( event ) {
+      switch ( event.keyCode ) {
+          case 81: // Q
+              transformControls.setSpace( transformControls.space === 'local' ? 'world' : 'local' );
+              break;
+          case 17: // Ctrl
+              transformControls.setTranslationSnap( 100 );
+              transformControls.setRotationSnap( Math.degToRad( 15 ) );
+              break;
+          case 87: // W
+              transformControls.setMode( 'translate' );
+              break;
+          case 69: // E
+              transformControls.setMode( 'rotate' );
+              break;
+          case 82: // R
+              transformControls.setMode( 'scale' );
+              break;
+          case 187:
+          case 107: // +, =, num+
+              transformControls.setSize( transformControls.size + 0.1 );
+              break;
+          case 189:
+          case 109: // -, _, num-
+              transformControls.setSize( Math.max( transformControls.size - 0.1, 0.1 ) );
+              break;
+          case 88: // X
+              transformControls.showX = !transformControls.showX;
+              break;
+          case 89: // Y
+              transformControls.showY = !transformControls.showY;
+              break;
+          case 90: // Z
+              transformControls.showZ = !transformControls.showZ;
+              break;
+          case 32: // Spacebar
+              transformControls.enabled = !transformControls.enabled;
+              break;
+      }
+  } );
+    window.addEventListener( 'keyup', function ( event ) {
+      switch ( event.keyCode ) {
+          case 17: // Ctrl
+              transformControls.setTranslationSnap( null );
+              transformControls.setRotationSnap( null );
+              break;
+      }
+  } );*/
 }
 
 function onResize() {

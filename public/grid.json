@@ -1,0 +1,101 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "DC15A6AB-F126-4C69-A053-540D71E1E03C",
+			"type": "PlaneBufferGeometry",
+			"width": 1,
+			"height": 1,
+			"widthSegments": 32,
+			"heightSegments": 32
+		}],
+	"materials": [
+		{
+			"uuid": "90DB82AB-985E-438A-9C20-A137F0225EF1",
+			"type": "MeshStandardMaterial",
+			"color": 0,
+			"roughness": 0.5,
+			"metalness": 0.5,
+			"emissive": 15212264,
+			"map": "A675F67F-5C14-4701-A5EE-76ABE01443C7",
+			"displacementMap": "DE26C41C-0DBE-4C66-BF7C-C9F95F79DF7A",
+			"displacementScale": 0,
+			"displacementBias": 0,
+			"side": 2,
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"wireframeLinewidth": 2.84
+		}],
+	"textures": [
+		{
+			"uuid": "A675F67F-5C14-4701-A5EE-76ABE01443C7",
+			"name": "",
+			"mapping": 300,
+			"repeat": [32,32],
+			"offset": [0,0],
+			"center": [0,0],
+			"rotation": 0,
+			"wrap": [1000,1000],
+			"format": 1023,
+			"type": 1009,
+			"encoding": 3001,
+			"minFilter": 1008,
+			"magFilter": 1006,
+			"anisotropy": 1,
+			"flipY": true,
+			"premultiplyAlpha": false,
+			"unpackAlignment": 4,
+			"image": "DD8D6242-0241-4097-9D6A-B24577633530"
+		},
+		{
+			"uuid": "DE26C41C-0DBE-4C66-BF7C-C9F95F79DF7A",
+			"name": "",
+			"mapping": 300,
+			"repeat": [1,1],
+			"offset": [0,0],
+			"center": [0,0],
+			"rotation": 0,
+			"wrap": [1001,1001],
+			"format": 1023,
+			"type": 1009,
+			"encoding": 3000,
+			"minFilter": 1008,
+			"magFilter": 1006,
+			"anisotropy": 1,
+			"flipY": true,
+			"premultiplyAlpha": false,
+			"unpackAlignment": 4,
+			"image": "4468B01A-E73C-4EA7-9C7C-47B5F5836F89"
+		}],
+	"images": [
+		{
+			"uuid": "DD8D6242-0241-4097-9D6A-B24577633530",
+			"url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAOUlEQVRYhe3RwQkAMAwDsey/dPrpBn4YWt0ARuCZoL0lG1EAAAAAAABvALZcH1C/AAAAAAAA4HvAAVqQ7iA9dwazAAAAAElFTkSuQmCC"
+		},
+		{
+			"uuid": "4468B01A-E73C-4EA7-9C7C-47B5F5836F89",
+			"url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAOUlEQVRYhe3RwQkAMAwDsey/dPrpBn4YWt0ARuCZoL0lG1EAAAAAAABvALZcH1C/AAAAAAAA4HvAAVqQ7iA9dwazAAAAAElFTkSuQmCC"
+		}],
+	"object": {
+		"uuid": "1A66E7CD-68D4-4A63-9F45-7FC497D764B4",
+		"type": "Mesh",
+		"name": "grid",
+		"layers": 1,
+		"matrix": [32,0,0,0,0,0,32,0,0,-32,0,0,0,16.627898,0,1],
+		"geometry": "DC15A6AB-F126-4C69-A053-540D71E1E03C",
+		"material": "90DB82AB-985E-438A-9C20-A137F0225EF1"
+	}
+}
