@@ -14,7 +14,7 @@
         "http-errors": "~1.6.3",
         "morgan": "~1.9.1",
         "pug": "^2.0.4",
-        "three": "^0.107.0",
+        "three": "^0.125.0",
         "@babel/core": "^7.5.5",
         "@babel/preset-env": "^7.5.5",
         "babelify": "^10.0.0",
